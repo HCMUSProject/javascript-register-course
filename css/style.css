@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+}
+/* ==================================================================== */
+
+.personal-info input {
+    max-width: 600px;
+}
+
+.personal-info label{
+    margin-bottom: 0 !important;
+}
+
+.personal-info .form-group{
+    margin-bottom: 0 !important;
+}
+
+.personal-info > .col > .row {
+    margin-bottom: 15px;
+}
+
+.title-label{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.title-label > label, .title-course{
+    font-weight: 700;
+}
+
+.birthday select {
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+    padding: 5px 10px;
+}
+
+/* ================== Course =================== */
+.list-courses .wrapper{
+    display: inline-block;
+}
+
+.custom-button{
+    color: #000;
+    background-image: linear-gradient(#fff, #e0e0eb);
+    display: block;
+    border: 1px solid #c1c1d7;
+    border-radius: 3px;
+    outline: 0;
+
+    margin: 0 auto 10px auto;
+
+    min-width: 60px;
+    padding: 5px 15px;
+}
+
+.list-courses .course-buttons{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.course-buttons .custom-button:last-child{
+    margin-bottom: 0;
+}
+
+
+.control-button.custom-button{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.control-buttons .custom-button:last-child{
+    margin-right: 0;
+}
+
+#available-courses, #selected-courses{
+    min-width: 400px;
+    min-height: 200px;
+
+    padding: 15px;
+    border-radius: 3px;
+
+    /* margin-right: -20px; */
+}
+
+/* only on webkit */
+.list-courses select::-webkit-scrollbar{
+    width:1px;
+    background-color:transparent
+}

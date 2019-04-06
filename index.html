@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- my csss -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Đăng ký môn học</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Đăng kí môn học</h2>
+            <hr>
+        </div>
+
+        <div id="form-input" class="row mt-5">
+            <div class="col">
+                <div class="row personal-info">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-3 title-label">
+                                <label for="txtID">Mã số:</label>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtID" placeholder="Mã số">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3 title-label">
+                                <label for="txtName">Họ tên:</label>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtName" placeholder="Họ tên">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3 title-label">
+                                <label for="male">Giới tính:</label>
+                            </div>
+                            <div class="col">
+                                <div class="form-check form-check-inline">
+                                    <div class="gender-wrapper mr-4">
+                                        <input class="form-check-input" type="radio" name="sex" id="male" value="1" />
+                                        <label for="male">Nam</label>
+                                    </div>
+
+                                    <div class="gender-wrapper">
+                                        <input class="form-check-input" type="radio" name="sex" id="female" value="0" />
+                                        <label for="female">Nữ</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row birthday">
+                            <div class="col-3 title-label">
+                                <label for="dateOfBirth">Ngày sinh:</label>
+                            </div>
+
+                            <div class="col">
+                                <div class="form-group">
+                                    <select class="form-control" id="dateOfBirth">
+                                        <option value="1">1</option>
+                                        <option value="1">1</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                    <select class="form-control" id="monthOfBirth">
+                                        <option value="1">1</option>
+                                        <option value="1">1</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                    <select class="form-control" id="yearOfBirth">
+                                        <option value="1">1</option>
+                                        <option value="1">1</option>
+                                        <option value="1">1</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row courses">
+                    <div class="col">
+                        <div class="row list-courses">
+                            <div class="col text-right">
+                                <div class="wrapper">
+                                    <p class="title-course text-left">Các môn học:</p>
+                                    <div class="form-group">
+                                        <select class="form-control" name="available-courses" id="available-courses"
+                                            multiple>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-1 course-buttons">
+                                <button type="button" class="custom-button" id="btnAddCourse">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </button>
+
+                                <button type="button" class="custom-button" id="btnAddAllCourses">
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                </button>
+
+                                <button type="button" class="custom-button" id="btnRemoveCourse">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                </button>
+
+                                <button type="button" class="custom-button" id="btnRemoveAllCourses">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                                </button>
+                            </div>
+
+                            <div class="col text-left">
+                                <div class="wrapper">
+                                    <p class="title-course">Đã chọn:</p>
+                                    <div class="form-group">
+                                        <select class="form-control" name="selected-courses" id="selected-courses"
+                                            multiple>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                            <option value="">ksdhfkjsd</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row control-buttons mt-3">
+                            <div class="col text-center">
+                                <button class="control-button custom-button" id="btnRegister">Đăng kí</button>
+                                <button class="control-button custom-button" id="btnShowList">Xem danh sách</button>
+                                <button class="control-button custom-button" id="btnSubmit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="register-table row mt-3">
+            <div class="col">
+                <table class="registration-table table table-bordered table-hover">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Mã số</th>
+                            <th>Họ tên</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- my js file -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
