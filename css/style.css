@@ -97,3 +97,39 @@ body {
     width:1px;
     background-color:transparent
 }
+
+/* popup view detail */
+
+#view-detail{
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    
+    min-width: 400px;
+    height: auto;
+    z-index: 10000;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 12px 2px #ccc;
+}
+
+
+#view-detail > div{
+    padding: 20px;
+}
+
+#view-detail > div.wrapper{
+    border-bottom: 1px solid #ccc;
+}
+
+#view-detail  div.registed-courses{
+    margin-left: 30px;
+}
+
+#view-detail p{
+    margin-bottom: 0;
+}
