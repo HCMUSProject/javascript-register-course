@@ -162,6 +162,13 @@ function validateForm() {
 }
 
 function ShowMessage(message) {
+    // truoc tien phai dim screen
+    let dimScreen = document.createElement('div');
+
+    dimScreen.setAttribute('class', 'dim-screen');
+
+    document.body.appendChild(dimScreen);
+
     let messageBox = document.createElement('div');
 
     messageBox.innerHTML = `
@@ -176,6 +183,8 @@ function ShowMessage(message) {
     messageBox.setAttribute('id', 'view-detail');
 
     messageBox.querySelector('.button-close').addEventListener('click', function () {
+
+        dimScreen.remove();
         messageBox.remove();
     })
 
@@ -221,6 +230,7 @@ $btnRegister.addEventListener('click', () => {
         })
 
         if (res != null) {
+            ShowMessage('Sinh viên này đã đăng ký trước đó.')
             return;
         }
 
@@ -249,6 +259,13 @@ function ShowStudentOnTable(student) {
 
     // set su kien
     $row.addEventListener('click', () => {
+        // dim screen
+        let dimScreen = document.createElement('div');
+
+        dimScreen.setAttribute('class', 'dim-screen');
+
+        document.body.appendChild(dimScreen);
+
         // show thong tin
         let strTemp = '';
 
@@ -257,7 +274,7 @@ function ShowStudentOnTable(student) {
             strTemp += `<p>${listCourses.find(element => element.id === value).course}</p>`;
         });
 
-        console.log(student);
+        // console.log(student);
 
         let viewDetail = document.createElement('div');
 
@@ -278,6 +295,7 @@ function ShowStudentOnTable(student) {
         viewDetail.setAttribute('data', student.uid);
 
         viewDetail.querySelector('.button-close').addEventListener('click', function () {
+            dimScreen.remove();
             viewDetail.remove();
         })
 
